@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Weather App</h1>
+    <div class="box">
+        <div class="box1">
+            <img class="icon" src="./icon.jpg" alt="image not found">
+        </div>
+        <div class="box2">
+            <div class="b1">
+                <form class="form" action="/" method="POST">
+                    <input type="text" class="ci" name="ci" class="ghost-input" placeholder="Enter a city">
+                </form>
+            </div>
+            <div class="b2">
+                <% if(temperature !==null) {%>
+
+                    <p class="temperature">
+                        <%= Math.round(temperature - 273.15) %> °C
+                    </p>
+                    <% } %>
+                        <% if(ci !==null) {%>
+                            <p class="city">
+                                <%= ci %>
+                            </p>
+                            <% } %>
+            </div>
+        </div>
+</body>
+
+</html>
